@@ -6,15 +6,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     private static Retrofit retrofit;
-    public static Retrofit getClient(){
-        retrofit =new Retrofit.Builder()
-                .baseUrl("http://192.168.56.1:8383/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+
+    // Método para obtener la instancia de Retrofit
+    public static Retrofit getClient() {
+        if (retrofit == null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl("http://192.168.56.1:8383/") // Cambia la URL base según tu API
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
         return retrofit;
-
     }
-
-
-
 }

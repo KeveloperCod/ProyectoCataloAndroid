@@ -43,13 +43,23 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.play.services.base)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
+    implementation ("com.google.android.gms:play-services-auth:20.4.1")
+    implementation ("com.google.android.gms:play-services-auth:20.0.0")
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation ("com.google.android.gms:play-services-auth:20.6.0")
+    implementation ("com.google.android.gms:play-services-identity:17.0.0")
+    // Dependencia para Google Sign-In
+    implementation ("com.google.android.gms:play-services-auth:20.5.0") // Asegúrate de usar la versión más reciente
+
+    // Dependencia para RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.2.1") // Asegúrate de usar la versión más reciente
 
 }
